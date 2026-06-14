@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model List<MyCity>
+
+<style>
+
+</style>
+<div class="text-center">
+    <h1 class="display-4" style="color:red; font-family:Impact, Charcoal, sans-serif;">COVID-19 INFO CENTER</h1>
+</div>
+<table class="table">
+<table style="background-color: white;">
+
+    <thead>
+        <tr>
+            <th>     Id     </th>
+            <th>     City   </th>
+            <th>     Population  </th>
+            <th>     Cases    </th>
+            <th>     Deaths     </th>
+            <th>     Testd   </th>
+            <th>     Date    </th>
+        </tr>
+    <thead>
+    <tbody>
+        @foreach (var Cities in Model)
+        {
+         <tr>
+             <th> 
+             @Cities.Id
+            </th>
+            <th>
+            @Cities.Name
+            </th>
+            <th>
+            @Cities.Population
+            </th>
+            <th>
+            @Cities.Cases
+            </th>
+            <th>
+            @Cities.Deaths
+            </th>
+            <th>
+            @Cities.Tested
+            </th>
+            <th>
+            @Cities.Date
+            </th>
+        </tr>
+        }
+    </tbody>
+</table>
